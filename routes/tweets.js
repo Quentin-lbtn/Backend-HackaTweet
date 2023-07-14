@@ -22,7 +22,8 @@ router.post('/' , (req, res) => {
     const newTweet = new Tweet({
         text: req.body.text,
         hashtag: req.body.hashtag,
-        username: req.body.userId
+        username: req.body.username,
+        // username: req.body.userId
 })
     newTweet.save().then(savedTweet => {
         if (!req.body.text || !req.body.username) {
@@ -54,3 +55,19 @@ router.post('/' , (req, res) => {
 
 
 module.exports = router;
+
+
+// .buttontweet {
+//     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//     width: 100px;
+//     height: 30px;
+//     background-color: #3f9bf0;
+//     border-radius: 30px;
+//     color: white;
+//     border-color: none;
+//     margin: 5px;
+//     }
+//     HTML
+//     <div id="tweet">
+//     <Button class="buttontweet">Tweet</Button>
+//     </div>
